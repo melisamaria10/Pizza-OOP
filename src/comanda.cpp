@@ -44,8 +44,8 @@ void Comanda::afiseazaComanda() const{
     }
     std::cout << count << "x " << currentPizza.getnume() << " - Pret: " << totalCost << " RON\n";
 }
-float Comanda::Total() const{
-    float total=0.0;
+double Comanda::Total() const{
+    double total=0.0;
     for(const auto& pizza : comanda){
         total=total + pizza.getpret();
     }
