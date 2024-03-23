@@ -31,7 +31,6 @@ int main(){
     meniu.adaugaPizza(p7);
     meniu.adaugaPizza(p8);
     meniu.adaugaPizza(p9);
-    meniu.afisareMeniu();
     Comanda comanda;
     int choice;
     afisare_meniu();
