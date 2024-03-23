@@ -3,10 +3,11 @@
 
 void Comanda::adaugaInCos(const Pizza& pizza, int cant){
     bool pizza_exista=false;
+    std::vector<Pizza> nou;
     for(Pizza &p: comanda){
         if(p.getnume()==pizza.getnume()){
             for(int i=0; i<cant;i++){
-                comanda.push_back(p);
+                nou.push_back(p);
             }
             pizza_exista=true;
             break;
@@ -14,8 +15,11 @@ void Comanda::adaugaInCos(const Pizza& pizza, int cant){
     }
     if(!pizza_exista) {
         for (int i = 0; i < cant; i++) {
-            comanda.push_back(pizza);
+            nou.push_back(pizza);
         }
+    }
+    for(const Pizza& p: nou){
+        comanda.push_back(p);
     }
 }
 void Comanda::eliminaDinCos(size_t index){
