@@ -30,7 +30,7 @@ void Comanda::eliminaDinCos(size_t index){
 void Comanda::afiseazaComanda() const{
     Pizza currentPizza = comanda[0];
     int count = 1;
-    float totalCost = currentPizza.getpret();
+    double totalCost = currentPizza.getpret();
     for (size_t i = 1; i < comanda.size(); ++i) {
         if (comanda[i] == currentPizza) {
             count++;
@@ -44,8 +44,8 @@ void Comanda::afiseazaComanda() const{
     }
     std::cout << count << "x " << currentPizza.getnume() << " - Pret: " << totalCost << " RON\n";
 }
-float Comanda::Total() const{
-    float total=0.0;
+double Comanda::Total() const{
+    double total=0.0;
     for(const auto& pizza : comanda){
         total=total + pizza.getpret();
     }

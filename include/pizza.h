@@ -7,21 +7,24 @@
 class Pizza {
 private:
     std::string nume;
-    float pret;
+    double pret;
 public:
-    Pizza(const std::string &, const float &);
+    Pizza(const std::string &, const double &);
 
     Pizza(const Pizza &);
 
     [[nodiscard]] const std::string &getnume() const;
 
-    [[nodiscard]] const float &getpret() const;
+    [[nodiscard]] const double &getpret() const;
 
     friend bool operator==(const Pizza &, const Pizza &) ;
 
     friend std::istream &operator>>(std::istream &, Pizza &);
 
-    friend std::ostream &operator<<(std::ostream &, Pizza &);
+    friend std::ostream &operator<<(std::ostream &,const Pizza &);
+
+    Pizza& operator=(const Pizza& other);
+
     ~Pizza();
 };
 #endif //OOP_PIZZA_H

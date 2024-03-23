@@ -1,7 +1,7 @@
 #include "pizza.h"
 #include <iostream>
 
-Pizza::Pizza(const std::string &nume, const float &pret){
+Pizza::Pizza(const std::string &nume, const double &pret){
     this->nume = nume;
     this->pret = pret;
 }
@@ -15,7 +15,7 @@ std::istream &operator>>(std::istream &in, Pizza &p) {
     in>>p.pret;
     return in;
 }
-std::ostream &operator<<(std::ostream &out, Pizza &p) {
+std::ostream &operator<<(std::ostream &out,const Pizza &p) {
     out << p.nume;
     out << p.pret;
     return out;
@@ -23,9 +23,16 @@ std::ostream &operator<<(std::ostream &out, Pizza &p) {
 const std::string &Pizza::getnume() const {
     return nume;
 }
-const float &Pizza::getpret() const {
+const double &Pizza::getpret() const {
     return pret;
 }
 bool operator==(const Pizza &a,const Pizza &b){
     return a.nume==b.nume && a.pret==b.pret;
+}
+Pizza& Pizza::operator=(const Pizza& other) {
+    if (this != &other) {
+        nume = other.nume;
+        pret = other.pret;
+    }
+    return *this;
 }
