@@ -8,13 +8,22 @@
 
 class Comanda{
 private:
-    std::vector<Pizza> comanda;
+    std::vector<Pizza*> comanda;
+    static int nrPizzaComandate;
+
 public:
-    void adaugaInCos(const Pizza& pizza, int cant);
+    void adaugaInCos(Pizza *pizza, int cant);
+
     void eliminaDinCos(size_t index);
+
     void afiseazaComanda() const;
+
     [[nodiscard]]double Total() const;
+
     [[nodiscard]]size_t size() const;
+
+    static int getnrPizzaComandate();
+
     ~Comanda();
 };
 

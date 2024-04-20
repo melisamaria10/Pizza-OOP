@@ -102,7 +102,9 @@ add_executable(${PROJECT_NAME} main.cpp ${SOURCES}
         include/pizza.h
         include/meniu.h
         include/comanda.h
-        include/example.h)
+        include/example.h
+        include/pizzaclasica.h
+        include/pizzadesert.h)
 
 ###############################################################################
 
@@ -162,6 +164,8 @@ add_executable(
         src/pizza.cpp
         src/meniu.cpp
         src/comanda.cpp
+        src/pizzaclasica.cpp
+        src/pizzadesert.cpp
 )
 
 target_link_libraries(

@@ -7,11 +7,11 @@
 
 class Meniu {
 private:
-    std::vector<Pizza> pizzas;
+    std::vector<Pizza*> pizzas;
 public:
-    void adaugaPizza(const Pizza& pizza);
+    void adaugaPizza(Pizza* pizza);
     void afisareMeniu() const;
-    [[nodiscard]]const std::vector<Pizza>& getPizzas() const;
+    [[nodiscard]]const std::vector<Pizza*>& getPizzas() const;
     ~Meniu();
 };
 

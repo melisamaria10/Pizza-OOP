@@ -8,6 +8,7 @@ class Pizza {
 private:
     std::string nume;
     double pret;
+    static int nrTotalPizza;
 public:
     Pizza(const std::string &, const double &);
 
@@ -17,6 +18,12 @@ public:
 
     [[nodiscard]] const double &getpret() const;
 
+    static int getnrTotalPizza();
+
+    virtual void citire(std::istream &in);
+
+    virtual void afisare(std::ostream &out) const=0;
+
     friend bool operator==(const Pizza &, const Pizza &) ;
 
     friend std::istream &operator>>(std::istream &, Pizza &);
@@ -25,6 +32,6 @@ public:
 
     Pizza& operator=(const Pizza& other);
 
-    ~Pizza();
+    virtual ~Pizza();
 };
 #endif //OOP_PIZZA_H
