@@ -1,5 +1,10 @@
 
 #ifndef OOP_EXAMPLE_H
 #define OOP_EXAMPLE_H
-int doSomething(int x);
+
+#include<string>
+#include "pizza.h"
+#include "pizzaclasica.h"
+#include "pizzadesert.h"
+
 #endif //OOP_EXAMPLE_H
