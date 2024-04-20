@@ -1,7 +1,7 @@
 #include "pizzaclasica.h"
 #include <iostream>
 
-PizzaClasica::PizzaClasica() : Pizza("", 0.0), tip_crusta("") {}
+PizzaClasica::PizzaClasica() : Pizza("", 0.0), tip_crusta("") {};
 
 PizzaClasica::PizzaClasica(const std::string &nume, const double &pret, const std::string &tip_crusta): Pizza(nume,pret), tip_crusta(tip_crusta){};
 
@@ -13,11 +13,6 @@ void PizzaClasica::afisare(std::ostream &out) const {
 
 const std::string &PizzaClasica::getTipCrusta() const {
     return tip_crusta;
-}
-
-const int &PizzaClasica::timpPreparare() {
-    int x=30;
-    return x;
 }
 
 void PizzaClasica::citire(std::istream &in) {

@@ -20,8 +20,6 @@ public:
 
     [[nodiscard]] const std::string &getTipCrusta() const;
 
-    [[nodiscard]] static const int &timpPreparare() ;
-
     void citire(std::istream &in) override;
 
     friend std::istream &operator>>(std::istream &, PizzaClasica &);
