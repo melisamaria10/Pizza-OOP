@@ -45,14 +45,6 @@ int main() {
     meniu.adaugaPizza(p9);
     meniu.adaugaPizza(p10);
 
-    //verificare upcasting
-
-   /* Pizza *ptr1 = p1;
-    ptr1->afisare(std::cout);
-    std::cout << ptr1->getnume() << std::endl;
-
-    Pizza *ptr2 = p3;
-    std::cout << ptr2->getpret() << std::endl; */
 
     //verificare downcasting
 
