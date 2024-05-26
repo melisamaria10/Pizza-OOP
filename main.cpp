@@ -177,6 +177,16 @@ int main() {
             }
         }
     }
+    delete p1;
+    delete p2;
+    delete p3;
+    delete p4;
+    delete p5;
+    delete p6;
+    delete p7;
+    delete p8;
+    delete p9;
+    delete p10;
     delete pizzaClasicaCreator;
     delete pizzaDesertCreator;
     delete weekendStrategy;
