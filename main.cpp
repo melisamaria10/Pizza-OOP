@@ -1,8 +1,6 @@
 #include "meniu.h"
 #include "comanda.h"
 #include <iostream>
-#include "pizzaclasica.h"
-#include "pizzadesert.h"
 #include "plata.h"
 #include "pizzacreator.h"
 
@@ -49,16 +47,16 @@ int main() {
 
     //verificare upcasting
 
-    Pizza *ptr1 = p1;
+   /* Pizza *ptr1 = p1;
     ptr1->afisare(std::cout);
     std::cout << ptr1->getnume() << std::endl;
 
     Pizza *ptr2 = p3;
-    std::cout << ptr2->getpret() << std::endl;
+    std::cout << ptr2->getpret() << std::endl; */
 
     //verificare downcasting
 
-    PizzaClasica *classicPizzaPtr1 = dynamic_cast<PizzaClasica *>(ptr1);
+    /*PizzaClasica *classicPizzaPtr1 = dynamic_cast<PizzaClasica *>(ptr1);
     classicPizzaPtr1->afisare(std::cout);
     if (classicPizzaPtr1) {
         std::cout << classicPizzaPtr1->timpPreparare() << std::endl;
@@ -67,7 +65,7 @@ int main() {
     }
 
     PizzaDesert *dessertPizzaPtr = dynamic_cast<PizzaDesert *>(ptr2);
-    std::cout << dessertPizzaPtr->getIngredientSpecial() << std::endl;
+    std::cout << dessertPizzaPtr->getIngredientSpecial() << std::endl; */
 
     std::cout << "Meniul contine " << Pizza::getnrTotalPizza() << " tipuri de pizza" << std::endl;
 
@@ -75,7 +73,6 @@ int main() {
     int metodaPlata;
     afisare_meniu();
     bool afisare_Meniu = true;
-    bool comandaFinalizata = false;
     while (afisare_Meniu) {
         std::cin >> choice;
         std::cin.get();
@@ -97,9 +94,8 @@ int main() {
                 int cant;
                 std::getline(std::cin, nume_pizza);
                 std::cin >> cant;
-                // Verificăm dacă cantitatea este mai mare strict decât 0
                 if (cant > 0) {
-                    // Cautăm pizza în meniu
+                    // Cautam pizza in meniu
                     bool pizza_gasita = false;
                     for (const auto &pizza : meniu.getPizzas()) {
                         if (pizza->getnume() == nume_pizza) {
@@ -109,7 +105,6 @@ int main() {
                             break;
                         }
                     }
-                    // Dacă pizza nu a fost găsită în meniu, afișăm un mesaj corespunzător
                     if (!pizza_gasita) {
                         std::cout << "Pizza nu este disponibila in meniu.\n";
                     }
@@ -169,16 +164,12 @@ int main() {
 
                         switch (metodaPlata) {
                             case 1: {
-                                PlataCard metoda;
-                                metoda.procesarePlata(comanda.Total());
-                                comandaFinalizata = true;
+                                makePayment<PlataCard>(comanda.Total());
                                 plataValida = true;
                                 break;
                             }
                             case 2: {
-                                PlataLivrare metoda;
-                                metoda.procesarePlata(comanda.Total());
-                                comandaFinalizata = true;
+                                makePayment<PlataLivrare>(comanda.Total());
                                 plataValida = true;
                                 break;
                             }
@@ -189,12 +180,6 @@ int main() {
                         }
                     }
 
-                    if (comandaFinalizata) {
-                        afisare_Meniu = false;
-                    } else {
-                        std::cout << "Plata nereusita. Reveniti si alegeti o metoda de plata valida.\n";
-                        afisare_meniu();
-                    }
                 }
                 break;
             }
