@@ -104,7 +104,10 @@ add_executable(${PROJECT_NAME} main.cpp ${SOURCES}
         include/comanda.h
         include/example.h
         include/pizzaclasica.h
-        include/pizzadesert.h)
+        include/pizzadesert.h
+        include/pizzacreator.h
+        include/pricingstrategy.h
+        include/plata.h)
 
 ###############################################################################
 
@@ -166,6 +169,9 @@ add_executable(
         src/comanda.cpp
         src/pizzaclasica.cpp
         src/pizzadesert.cpp
+        src/pizzacreator.cpp
+        src/pricingstrategy.cpp
+        src/plata.cpp
 )
 
 target_link_libraries(

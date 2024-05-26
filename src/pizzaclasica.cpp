@@ -11,6 +11,11 @@ void PizzaClasica::afisare(std::ostream &out) const {
     out << "Pizza Clasica: " << getnume() << ", Pret: " << getpret() << ", Tip de crusta: " << tip_crusta;
 }
 
+int PizzaClasica::timpPreparare() {
+    int x=30;
+    return x;
+}
+
 const std::string &PizzaClasica::getTipCrusta() const {
     return tip_crusta;
 }

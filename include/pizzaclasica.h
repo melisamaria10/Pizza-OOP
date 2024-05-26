@@ -18,6 +18,8 @@ public:
 
     void afisare(std::ostream &out) const override;
 
+    int timpPreparare();
+
     [[nodiscard]] const std::string &getTipCrusta() const;
 
     void citire(std::istream &in) override;
