@@ -20,7 +20,7 @@ public:
 
     //int timpPreparare();
 
-   // [[nodiscard]] const std::string &getTipCrusta() const;
+   [[nodiscard]] const std::string &getTipCrusta() const;
 
     void citire(std::istream &in) override;
 

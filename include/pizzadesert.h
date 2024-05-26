@@ -18,7 +18,7 @@ public:
 
     void afisare(std::ostream &out) const override;
 
-    //[[nodiscard]] const std::string &getIngredientSpecial() const;
+    [[nodiscard]] const std::string &getIngredientSpecial() const;
 
     void citire(std::istream &in) override;
 
