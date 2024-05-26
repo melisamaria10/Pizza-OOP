@@ -98,7 +98,16 @@ FetchContent_MakeAvailable(googletest)
 ###############################################################################
 
 # NOTE: update executable name in .github/workflows/cmake.yml:25 when changing name here
-add_executable(${PROJECT_NAME} main.cpp ${SOURCES})
+add_executable(${PROJECT_NAME} main.cpp ${SOURCES}
+        include/pizza.h
+        include/meniu.h
+        include/comanda.h
+        include/example.h
+        include/pizzaclasica.h
+        include/pizzadesert.h
+        include/pizzacreator.h
+        include/pricingstrategy.h
+        include/plata.h)
 
 ###############################################################################
 
@@ -155,6 +164,14 @@ add_executable(
         ${HEADERS}
         ${TESTS}
         ${SOURCES}
+        src/pizza.cpp
+        src/meniu.cpp
+        src/comanda.cpp
+        src/pizzaclasica.cpp
+        src/pizzadesert.cpp
+        src/pizzacreator.cpp
+        src/pricingstrategy.cpp
+        src/plata.cpp
 )
 
 target_link_libraries(
