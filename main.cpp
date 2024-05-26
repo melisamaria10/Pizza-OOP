@@ -16,10 +16,10 @@ void afisare_meniu(){
 int main() {
     Meniu meniu;
 
+    //am setat pretul de weekend
     PricingStrategy *weekendStrategy = new WeekendPricing();
-    PricingStrategy *weekdayStrategy = new NormalPricing();
 
-    Comanda comanda(weekendStrategy); //am setat la pretul de weekend
+    Comanda comanda(weekendStrategy);
 
     PizzaCreator *pizzaClasicaCreator = new PizzaClasicaCreator();
     PizzaCreator *pizzaDesertCreator = new PizzaDesertCreator();
@@ -192,5 +192,4 @@ int main() {
     delete pizzaClasicaCreator;
     delete pizzaDesertCreator;
     delete weekendStrategy;
-    delete weekdayStrategy;
 }
