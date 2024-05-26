@@ -17,9 +17,9 @@ void PizzaClasica::afisare(std::ostream &out) const {
     return x;
 }*/
 
-const std::string &PizzaClasica::getTipCrusta() const {
+/*const std::string &PizzaClasica::getTipCrusta() const {
     return tip_crusta;
-}
+}*/
 
 void PizzaClasica::citire(std::istream &in) {
     Pizza::citire(in);

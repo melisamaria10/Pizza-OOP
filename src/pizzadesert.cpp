@@ -13,9 +13,9 @@ void PizzaDesert::afisare(std::ostream &out) const{
     out<<"Pizza Desert: "<<getnume()<<" ,Pret: "<<getpret()<<" , Ingredient special: "<<ingredient_special;
 }
 
-const std::string &PizzaDesert::getIngredientSpecial() const {
+/*const std::string &PizzaDesert::getIngredientSpecial() const {
     return ingredient_special;
-}
+}*/
 
 void PizzaDesert::citire(std::istream &in){
     Pizza::citire(in);
