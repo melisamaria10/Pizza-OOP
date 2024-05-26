@@ -14,9 +14,7 @@ private:
     static int nrPizzaComandate;
 
 public:
-    Comanda(PricingStrategy* pricingStrategy);
-
-    void setPricingStrategy(PricingStrategy* pricingStrategy);
+    explicit Comanda(PricingStrategy* pricingStrategy);
 
     void adaugaInCos(Pizza *pizza, int cant);
 

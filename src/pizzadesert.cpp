@@ -1,12 +1,13 @@
 #include "pizzadesert.h"
 #include <iostream>
+#include <utility>
 
 
-PizzaDesert::PizzaDesert() : Pizza("", 0.0), ingredient_special("") {}
+PizzaDesert::PizzaDesert() : Pizza("", 0.0) {}
 
- PizzaDesert::PizzaDesert(const std::string &nume,const double &pret, const std::string &ingredient_special): Pizza(nume,pret), ingredient_special(ingredient_special){}
+ PizzaDesert::PizzaDesert(const std::string &nume,const double &pret, std::string ingredient_special): Pizza(nume,pret), ingredient_special(std::move(ingredient_special)){}
 
-[[maybe_unused]] PizzaDesert::PizzaDesert(const PizzaDesert &aux): Pizza(aux), ingredient_special(aux.ingredient_special){};
+[[maybe_unused]] PizzaDesert::PizzaDesert(const PizzaDesert &aux) = default;
 
 void PizzaDesert::afisare(std::ostream &out) const{
     out<<"Pizza Desert: "<<getnume()<<" ,Pret: "<<getpret()<<" , Ingredient special: "<<ingredient_special;

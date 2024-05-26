@@ -12,13 +12,13 @@ public:
 
     PizzaClasica();
 
-    PizzaClasica(const std::string &,const double &,const std::string &);
+    PizzaClasica(const std::string &,const double &,std::string );
 
-    PizzaClasica(const PizzaClasica &);
+    [[maybe_unused]] PizzaClasica(const PizzaClasica &);
 
     void afisare(std::ostream &out) const override;
 
-    int timpPreparare();
+    //int timpPreparare();
 
     [[nodiscard]] const std::string &getTipCrusta() const;
 

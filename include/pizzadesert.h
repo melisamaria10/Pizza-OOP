@@ -12,7 +12,7 @@ public:
 
     PizzaDesert();
 
-    PizzaDesert(const std::string &, const double &, const std::string &);
+    PizzaDesert(const std::string &, const double &, std::string );
 
     PizzaDesert(const PizzaDesert &);
 

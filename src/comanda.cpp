@@ -7,10 +7,6 @@ int Comanda::nrPizzaComandate=0;
 
 Comanda::Comanda(PricingStrategy* pricingStrategy) : pricingStrategy_(pricingStrategy) {}
 
-void Comanda::setPricingStrategy(PricingStrategy* pricingStrategy) {
-    pricingStrategy_ = pricingStrategy;
-}
-
 void Comanda::adaugaInCos(Pizza *pizza, int cant){
     for (int i = 0; i < cant; i++) {
         comanda.push_back(pizza);
@@ -46,7 +42,7 @@ void Comanda::afiseazaComanda() const{
 
     Pizza* currentPizza = comanda_sortata[0];
     int count = 1;
-    float totalCost = currentPizza->getpret();
+    double totalCost = currentPizza->getpret();
     for (size_t i = 1; i < comanda_sortata.size(); ++i) {
         if (comanda_sortata[i] == currentPizza) {
             count++;

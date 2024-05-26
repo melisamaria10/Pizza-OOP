@@ -46,7 +46,7 @@ void Pizza::citire(std::istream &in){
     std::getline(in, nume, '\n');
     std::cout << "Introduceti pretul: ";
     in >> pret;
-};
+}
 
 bool operator==(const Pizza &a,const Pizza &b){
     return a.nume==b.nume && a.pret==b.pret;
