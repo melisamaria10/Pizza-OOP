@@ -156,12 +156,14 @@ int main() {
 
                         switch (metodaPlata) {
                             case 1: {
-                                makePayment<PlataCard>(comanda.Total());
+                                PlataCard plataCard;
+                                plataCard.procesarePlata(comanda.Total());
                                 plataValida = true;
                                 break;
                             }
                             case 2: {
-                                makePayment<PlataLivrare>(comanda.Total());
+                                PlataLivrare plataLivrare;
+                                plataLivrare.procesarePlata(comanda.Total());
                                 plataValida = true;
                                 break;
                             }

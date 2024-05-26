@@ -21,7 +21,5 @@ public:
     void procesarePlata(double pret) const override;
 };
 
-template<typename T>
-void makePayment(double price);
 
 #endif //OOP_PLATA_H

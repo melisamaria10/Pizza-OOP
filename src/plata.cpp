@@ -29,11 +29,3 @@ void PlataLivrare::procesarePlata(double pret) const {
     }
 }
 
-template<typename T>
-void makePayment(double price) {
-    T metodaPlata;
-    metodaPlata.procesarePlata(price);
-}
-
-template void makePayment<PlataCard>(double price);
-template void makePayment<PlataLivrare>(double price);
